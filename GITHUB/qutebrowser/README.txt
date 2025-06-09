@@ -4,7 +4,8 @@ Brief Description: This is my personal setup on Qutebrowser
 
 Why: I wanted to test Qutebrowser for the idea of navigation via keyboard interested me.
         I also wanted to skip youtube ads while keeping a dark mode theme for my eyes.
-            Realizing Qutebrowser accepts config.py means one could customize anything on this browser and it's a nice application of the code language.
+            Realizing Qutebrowser accepts config.py means one could customize anything on this browser and it's a nice 
+               application of the code language.
 
 Quick Start: 1. Install Qutebrowser for you OS.
              2. Access your .config directory via gui (it's under hidden files) and open your config.py file.
@@ -16,9 +17,7 @@ Usage: Skips Youtube ads completely via bypass.
         The Youtube platform uploads media files that's played via stream that's live on web browser. This config creates an mpv application that uploads and plays those media files skipping the Youtube ads.
         TLDR; you play the media file directly avoiding Youtube's involvement and yes it can play live media.
 
-
         If you want to keep Youtube's involvement, then look inside the greasemoney folder for the it's a script to automatically skip ads.
-
 
 Special Thanks:      Bread on Penguins and Qutebrowser team (for manual)
 
