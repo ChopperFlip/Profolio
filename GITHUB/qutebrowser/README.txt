@@ -20,6 +20,6 @@ Usage: Skips Youtube ads completely via bypass.
         If you want to keep Youtube's involvement, then look inside the greasemoney folder for the it's a script to automatically skip ads.
 
 
-Contributing: Bread on Penguins
-              ChatGPT
-              Qutebrowser team (for manual)
+Special Thanks:      Bread on Penguins and Qutebrowser team (for manual)
+
+Contributing:  If you'd like to contribute, please fork the repository and open a pull request to the `main` branch.
