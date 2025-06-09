@@ -1,0 +1,18 @@
+## List all autostart application .desktop files and their contents
+## These files define what GUI applications start when a desktop session begins (not at system boot)
+grep -r '' /etc/xdg/autostart/
+
+## Identify the specific applications you want to disable from starting automatically at login
+
+## Copy the system-wide autostart .desktop files to the user's autostart directory
+## This overrides the system settings safely for your user session
+cp /etc/xdg/autostart/org.kde.kalendarac.desktop ~/.config/autostart/
+
+## Disable the application by adding 'Hidden=true' to the copied .desktop file
+## This prevents it from launching at login without affecting the system-wide file
+echo "Hidden=true" >> ~/.config/autostart/org.kde.kalendarac.desktop
+
+## Repeat the same steps for any other application you want to disable
+cp /etc/xdg/autostart/org.kde.discover.notifier.desktop ~/.config/autostart/
+echo "Hidden=true" >> ~/.config/autostart/org.kde.discover.notifier.desktop
+
