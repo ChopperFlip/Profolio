@@ -13,3 +13,5 @@ What: 1. Searches for .desktop files in /etc/xdg/autostart/
       4. Preserves the system-wide files
 
 Usage: Open terminal and copy past the commands
+
+Contributing:  If you'd like to contribute, please fork the repository and open a pull request to the `main` branch.
