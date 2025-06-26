@@ -1,0 +1,7 @@
+# Running Old-School Runescape on linux note this is accomplish with flatpak
+curl -fSsL https://raw.githubusercontent.com/nmlynch94/com.jagexlauncher.JagexLauncher/main/install-jagex-launcher-repo.sh | bash
+# short alias in bashrc for quick runs and updates for runescape system 
+nano  ~/.bashrc
+alias runescape='flatpak run com.jagexlauncher.JagexLauncher'
+alias runescape_update='flatpak update' 
+source ~/.bashrc
