@@ -1,0 +1,7 @@
+# Visual Pinball on Linux 10.60 version: must have lutris installed  
+# sudo <package handler> install lutris (yes install) 
+sudo apt install lutris -y
+# on lutris click plus + symbol and search for visual pinball install the visual pinball x for newer version 
+# proceed with the installation bing is not needed: note lutris is for gaming and check your directory. 
+# my personal directory is /games/visual-pinball-x/drive_c/
+# for your tables check /games/visual-pinball-x/drive_c/'Visual Pinball/Tables. this directory path is for your saved tables and where to place downloaded tables 
