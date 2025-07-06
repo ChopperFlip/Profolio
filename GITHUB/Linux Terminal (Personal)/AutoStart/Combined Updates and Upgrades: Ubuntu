@@ -1,0 +1,6 @@
+## Bash Alias for Kubuntu updates and upgrades. 
+## The Goal is to reduce the amount of typing. 
+nano ~/.bashrc
+Alias update = 'sudo apt update && sudo apt -o APT::Get::Always-Include-Phased-Updates=true full-update -y'
+# save and exit
+source ~/.bashrc
