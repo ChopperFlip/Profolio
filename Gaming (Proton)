@@ -1,0 +1,4 @@
+## For Lutirs to utilize Proton. 
+## Link the Proton files from your steam to your Lutris client
+## Linking avoids the need to constantly updated the Lutris version of Proton (Note the -s flag is to override the file in the Lutris)
+ln -s $HOME/.local/share/Steam/steamapps/common/Proton*/dist $HOME/.local/share/lutris/runners/wine/proton
