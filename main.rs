@@ -23,19 +23,24 @@ println!("enter the monster's stamina:");
     let mut monster_stamina: i32 = input.trim().parse().unwrap();
     input.clear();
 
-println!("enter the player's skill:");
+println!("enter {}'s skill:", player_name);
     io::stdin().read_line(&mut input).unwrap();
     let player_skill: i32 = input.trim().parse().unwrap();
     input.clear();
 
-println!("enter the player's stamina:");
+println!("enter {}'s stamina:", player_name);
     io::stdin().read_line(&mut input).unwrap();
     let mut player_stamina: i32 = input.trim().parse().unwrap();
     input.clear();
 
+println!("enter {}'s luck:", player_name);
+    io::stdin().read_line(&mut input).unwrap();
+    let mut player_luck: i32 = input.trim().parse().unwrap();
+    input.clear();
+
 // Preparing the Combat rounds
 let mut rng = rand::thread_rng();
-println!("The battle begins!");
+println!("------------------ \nThe battle begins! \n------------------");
 
 // While loops during combat rounds
 while monster_stamina > 0 && player_stamina > 0 {
@@ -65,22 +70,22 @@ while monster_stamina > 0 && player_stamina > 0 {
                                                             damage = 1; // total damage becomes 1
                                                             }
                         player_luck -= 1; // luck decreases after testing
+                        println!("{} remaining luck is {}", player_name, player_luck);
                                         }
 
         monster_stamina -= damage; // apply total damage at once
-        println!("The {}'s remaining stamina: {}", monster_name, monster_stamina);
+        println!("The {}'s remaining stamina: {}. n------------------", monster_name, monster_stamina);
                                     }
 
     else if monster_attack > player_attack {
         player_stamina -= 2;
-        println!("{} endures injuries!",player_name);
+        println!("{} endures injuries! \n------------------",player_name);
                                             }
     else {
-        println!("Clash! Neither injured!");
+        println!("Clash! Neither injured! \n------------------");
         }
         }
-    println!("-----------------");
-
+ 
 // If results from combat rounds
 if player_stamina > 0 {
     println!("You breath out knowing, the {} is defeated!",monster_name);
