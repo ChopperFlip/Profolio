@@ -55,7 +55,7 @@ fn main() {
         if player_attack > monster_attack {
             let mut damage = 2;  // Base damage
             println!("{} endures injuries!", monster_name,);
-            println!("Would thou like to test thy luck? (Y/N)");
+            println!("Do you wish to tempt fate? (Y/N)");
             let mut choice = String::new();
             io::stdin().read_line(&mut choice).unwrap();
             let choice = choice.trim().to_lowercase();
@@ -63,10 +63,10 @@ fn main() {
                 let luck_roll = rng.gen_range(1..=12);
                 println!("Luck roll: {}", luck_roll);
                 if player_luck >= luck_roll {
-                    println!("*** Fortune smiles! Critical hit! ***");
+                    println!("*** Fortune smiles upon you! Critical hit! ***");
                     damage = 4; // total damage becomes 4
                 } else {
-                    println!("*** Your weapon deflects into the armour. ***");
+                    println!("*** Your strike deflects into the armor. ***");
                     damage = 1; // total damage becomes 1
                 }
                 player_luck -= 1; // luck decreases after testing
@@ -74,23 +74,23 @@ fn main() {
             }
 
             monster_stamina -= damage; // apply total damage at once
-            println!("The {}'s remaining stamina: {}. \n------------------", monster_name, monster_stamina);
+            println!("The {}'s remaining stamina is: {}. \n------------------", monster_name, monster_stamina);
         }
 
         else if monster_attack > player_attack {
             player_stamina -= 2;
-            println!("{} endures injuries! \n------------------",player_name);
+            println!("{} staggers from injury! \n------------------",player_name);
         }
         else {
-            println!("Clash! Neither injured! \n------------------");
+            println!("The blows collide! Neither is harmed!  \n------------------");
         }
     }
 
     // If results from combat rounds
     if player_stamina > 0 {
-        println!("You breath out with a remaining {} stamina knowing , the {} is defeated!", player_stamina, monster_name);
+        println!("You exhale catching breath. With {} stamina left you vanquished the {}.", player_stamina, monster_name);
                         }
     else{
-        println!("Darkness encloses, and the sound of a friend speaking reaches your ears. Death greets you.");
+        println!("The darkness closes in, and a friend’s voice lingers in your ears as death welcomes you.");
     }
 }
