@@ -74,7 +74,7 @@ while monster_stamina > 0 && player_stamina > 0 {
                                         }
 
         monster_stamina -= damage; // apply total damage at once
-        println!("The {}'s remaining stamina: {}. n------------------", monster_name, monster_stamina);
+        println!("The {}'s remaining stamina: {}. \n------------------", monster_name, monster_stamina);
                                     }
 
     else if monster_attack > player_attack {
