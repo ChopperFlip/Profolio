@@ -48,9 +48,29 @@ while monster_stamina > 0 && player_stamina > 0 {
     println!("Player's attack: {}", player_attack);// to check code is correct commit later
 
     if player_attack > monster_attack {
-        monster_stamina -=2; //takes 2 damage
-        println!("{} endures injuries! Stamina: {}",monster_name, monster_stamina);
+        let mut damage = 2;  // Base damage
+            println!("{} endures injuries!", monster_name,);
+            println!("Would thou like to test thy luck? (Y/N)");
+                let mut choice = String::new();
+                io::stdin().read_line(&mut choice).unwrap();
+                let choice = choice.trim().to_lowercase();
+                        if choice == "y" {
+                            let luck_roll = rng.gen_range(1..=12);
+                            println!("Luck roll: {}", luck_roll);
+                        if player_luck >= luck_roll {
+                            println!("Fortune smiles! Critical hit!");
+                                damage = 4; // total damage becomes 4
+                                                    } else {
+                                                            println!("Your weapon deflects into the armour.");
+                                                            damage = 1; // total damage becomes 1
+                                                            }
+                        player_luck -= 1; // luck decreases after testing
                                         }
+
+        monster_stamina -= damage; // apply total damage at once
+        println!("The {}'s remaining stamina: {}", monster_name, monster_stamina);
+                                    }
+
     else if monster_attack > player_attack {
         player_stamina -= 2;
         println!("{} endures injuries!",player_name);
@@ -58,8 +78,8 @@ while monster_stamina > 0 && player_stamina > 0 {
     else {
         println!("Clash! Neither injured!");
         }
+        }
     println!("-----------------");
-                                                }
 
 // If results from combat rounds
 if player_stamina > 0 {
