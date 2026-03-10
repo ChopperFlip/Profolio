@@ -44,8 +44,8 @@ fn main() {
 
     // While loops during combat rounds
     while monster_stamina > 0 && player_stamina > 0 {
-        let monster_roll = rng.gen_range(1..=12);
-        let player_roll = rng.gen_range(1..=12);
+        let monster_roll = rng.gen_range(2..=12);
+        let player_roll = rng.gen_range(2..=12);
         let monster_attack = monster_skill + monster_roll;
         let player_attack = player_skill + player_roll;
 
@@ -60,7 +60,7 @@ fn main() {
             io::stdin().read_line(&mut choice).unwrap();
             let choice = choice.trim().to_lowercase();
             if choice == "y" {
-                let luck_roll = rng.gen_range(1..=12);
+                let luck_roll = rng.gen_range(2..=12);
                 println!("Luck roll: {}", luck_roll);
                 if player_luck >= luck_roll {
                     println!("*** Fortune smiles upon you! Critical hit! ***");
