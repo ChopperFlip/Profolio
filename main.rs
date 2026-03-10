@@ -49,12 +49,12 @@ fn main() {
         let monster_attack = monster_skill + monster_roll;
         let player_attack = player_skill + player_roll;
 
-        println!("Monster's attack: {}", monster_attack);// to check code is correct
-        println!("Player's attack: {}", player_attack);// to check code is correct commit later
+        println!("{}'s attack: {}", monster_name, monster_attack);// to check code is correct
+        println!("{}'s attack: {}", player_name, player_attack);// to check code is correct commit later
 
         if player_attack > monster_attack {
             let mut damage = 2;  // Base damage
-            println!("{} endures injuries!", monster_name,);
+            println!("{} quavers from the pain!", monster_name,);
             println!("Do you wish to tempt fate? (Y/N)");
             let mut choice = String::new();
             io::stdin().read_line(&mut choice).unwrap();
